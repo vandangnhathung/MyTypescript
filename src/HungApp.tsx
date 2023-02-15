@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer, useRef, useState } from "react";
+import { ProductNewFeature } from "./HungUtils/interfaces";
 
 //arrObj: {}[] = [{}]
 
@@ -8,6 +9,7 @@ enum Permission {
   EDITOR = "EDITOR",
 }
 
+//Literal
 type Age = 10 | 20 | 30;
 
 const reviews: {
@@ -90,6 +92,34 @@ const HungApp = () => {
       <p>{premium ? "Premium" : "Not Premium"}</p>
     </>
   );
+  //Interface
+  interface LabeledValue {
+    size: number;
+    label: string;
+  }
+  function printLabel(labeledObj: LabeledValue) {
+    console.log(labeledObj.label + " " + labeledObj.size);
+  }
+
+  function addProduct(product: ProductNewFeature) {
+    console.log("🚀 ~ file: HungApp.tsx:107 ~ addProduct ~ product", product);
+  }
+  let myObj = { size: 10, label: "Size 10 Object" };
+  // printLabel(myObj);
+  // let productObj = {
+  //   name: "iphone",
+  //   brand: "apple",
+  //   color: "red",
+  //   price: 1100,
+  // };
+  const productObj: ProductNewFeature = {
+    name: "iphone",
+    brand: "apple",
+    color: "red",
+    price: 1100,
+    speed: 10,
+  };
+  addProduct(productObj);
   return (
     <div>
       <div className="review">

@@ -45,3 +45,9 @@ export function testNumber(a: number): number {
 //Definition: unknown is a type that can be anything but we can't assign it to any other type
 //Never
 //Definition: never is a type that can be only never (More common in error handling)
+
+//Interface (Very important)
+//Definition: When we use the beneath code, we can see that we have to write the same code for the same type of object in different places, so we can use interface to solve this problem
+//We can declare interface in the same name of each other and they'll merge variables together
+//Assertion
+//Definition: Assertion is a way to merge two interface together and create new interface which have properties of both interfaces
